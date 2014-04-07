@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout     
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/drawer_layout"
+android:layout_width="match_parent"
+android:layout_height="match_parent" >
+
+<!-- This is how your main page will look, just 2 buttons -->
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp" >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:onClick="onLeft"
+        android:text="left" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:onClick="onRight"
+        android:text="right" />
+    </RelativeLayout>
+
+<!-- Left Drawrer -->
+
+    <RelativeLayout
+    android:id="@+id/whatYouWantInLeftDrawer"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start" >
+
+    <ListView
+        android:id="@+id/leftListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff" />
+    <!-- you can have many more widgets here like buttons or labels -->
+    </RelativeLayout>
+
+<!-- Right Drawrer -->
+
+    <RelativeLayout
+    android:id="@+id/whatYouWantInRightDrawer"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right" >
+
+    <ListView
+        android:id="@+id/rightListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff" />
+    <!-- you can have many more widgets here like buttons or labels -->
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
